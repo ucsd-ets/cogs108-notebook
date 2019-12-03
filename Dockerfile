@@ -6,6 +6,6 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 USER root
 
 RUN conda install -y pandas==0.25.2
-RUN pip install --yes ntlk
+RUN pip install ntlk
 
 USER $NB_UID
