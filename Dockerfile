@@ -5,7 +5,12 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 
 USER root
 
-RUN conda install -y pandas==0.25.2
-RUN pip install nltk nbgrader==0.6.1
+RUN conda install -y pandas==0.25.2 && \
+    fix-permissions $CONDA_DIR && \
+    fix-permissions /home/$NB_USER
+
+RUN pip install nltk nbgrader==0.6.1 && \
+    fix-permissions $CONDA_DIR && \
+    fix-permissions /home/$NB_USER
 
 USER $NB_UID
