@@ -11,6 +11,8 @@ RUN conda install -y pandas==0.25.2 && \
 
 RUN pip install nltk nbgrader==0.6.1 && \
     fix-permissions $CONDA_DIR && \
-    fix-permissions /home/$NB_USER
+    fix-permissions /home/$NB_USER && \
+    chown -R jovyan:users /opt/conda/etc/jupyter/nbconfig && \
+    chmod -R +r /opt/conda/etc/jupyter/nbconfig
 
 USER $NB_UID
