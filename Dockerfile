@@ -9,7 +9,7 @@ RUN conda install -y pandas==0.25.2 && \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER
 
-RUN pip install nltk nbgrader==0.6.1 && \
+RUN pip install nltk nbgrader==0.6.1 geopandas && \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER && \
     chown -R jovyan:users /opt/conda/etc/jupyter/nbconfig && \
