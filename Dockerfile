@@ -5,6 +5,6 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 
 USER root
 
-RUN pip install otter-grader
+RUN pip install otter-grader jupytext==1.16.4
 
 USER $NB_UID
