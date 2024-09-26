@@ -1,6 +1,6 @@
 ARG BASE_CONTAINER=ghcr.io/ucsd-ets/datascience-notebook:2024.4-stable
 FROM $BASE_CONTAINER
-
+# rebuild
 LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 
 USER root
